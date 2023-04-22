@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // Application name
       title: 'Flutter Hello World',
+      debugShowCheckedModeBanner: false,
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  const MyHomePage({super.key, required this.title});  
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +33,7 @@ class MyHomePage extends StatelessWidget {
         // The title text which will be shown on the action bar
         title: Text(title),
       ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      body: const Image(image: AssetImage('assets/images/logo4.jpg')),
     );
   }
 }
